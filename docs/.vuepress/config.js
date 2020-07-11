@@ -1,7 +1,6 @@
 module.exports = {
     title: 'Snippet',
     description: 'simple code snippet',
-    base: '/snippet/',
     themeConfig: {
         nav: [
             {
