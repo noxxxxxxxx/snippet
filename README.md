@@ -18,7 +18,7 @@ To check out live examples and docs, visit [snippet.noxxxx.com](https://snippet.
 
 ## Contribution
 
-Feel free to contribute code snippets;
+Feel free to contribute code snippets.
 
 ## License
 
