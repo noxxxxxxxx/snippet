@@ -130,3 +130,77 @@ function separate (num) {
 
 seperate(111111)  // 111,111
 ```
+
+## Chinese Money format(人民币 分->元 转换)
+
+```js
+// 分 -> 元
+function regFenToYuan(fen, flag = true) {
+    var num = fen
+    num = fen * 0.01
+    num += ''
+    var reg = num.indexOf('.') > -1 ? /(\d{1,3})(?=(?:\d{3})+\.)/g : /(\d{1,3})(?=(?:\d{3})+$)/g
+    num = num.replace(reg, '$1')
+    num = toDecimal2(num, flag)
+    return num
+}
+// 保留两位小数 equal toFixed(2)
+function toDecimal2(x, flag = true) {
+    var ff = parseFloat(x)
+    if (isNaN(ff)) {
+        return false
+    }
+    var f = Math.round(x * 100) / 100
+    var s = f.toString()
+    var rs = s.indexOf('.')
+    if (rs < 0) {
+        rs = s.length
+        if (flag) {
+            s += '.'
+        }
+    }
+    if (flag) {
+        while (s.length <= rs + 2) {
+            s += '0'
+        }
+    }
+    return s
+}
+
+regFenToYuan(134) // 1.34
+regFenToYuan(1434) // 14.34
+```
+
+## Number increase/decrease animation
+
+```js
+/**
+ * quickly change number from A to B
+ * @param from number
+ * @param to number
+ */
+function animNumber(from, to) {
+    const start = new Date().getTime()
+    const loop = () => {
+        setTimeout(() => {
+            const now = (new Date().getTime()) - start
+            const progress = now / 700
+            const result = to > from ? Math.floor((to - from) * progress + from) : Math.floor(from - (from - to) * progress)
+            const res = progress < 1 ? result : to
+            if (res) {
+                // update number
+                console.log(res)
+            }
+            if (progress < 1) loop()
+        }, 90)
+    }
+    loop()
+}
+```
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="hjoker" data-slug-hash="qBNdyBB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="number increase/decrease animation">
+  <span>See the Pen <a href="https://codepen.io/hjoker/pen/qBNdyBB">
+  number increase/decrease animation</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
