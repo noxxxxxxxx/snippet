@@ -4,6 +4,19 @@ sidebar: auto
 
 # Javascript
 
+## get month end Day, how many days in a specific month
+
+```ts
+
+function getMonthEndDay(year: number, month: number): number {
+  return 32 - new Date(year, month - 1, 32).getDate();
+}
+
+getMonthEndDay(2012, 10) 
+// means 2012/10 has 31 days
+
+```
+
 ## Remove duplicate letters
 
 ```js
