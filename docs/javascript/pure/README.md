@@ -6,6 +6,8 @@ sidebar: auto
 
 ## get month end Day, how many days in a specific month
 
+获取给定月份的具体天数
+
 ```ts
 
 function getMonthEndDay(year: number, month: number): number {
@@ -19,6 +21,7 @@ getMonthEndDay(2012, 10)
 
 ## Remove duplicate letters
 
+移除重复字符
 ```js
 // ES6
 // from https://stackoverflow.com/questions/35609731/remove-duplicate-in-a-string-javascript
@@ -53,6 +56,8 @@ Related:
 
 Play audio without `<audio>`
 
+通过 `Audio` 对象播放音频
+
 ```js
 function playAudio () {
     const instance = new Audio()
@@ -82,6 +87,8 @@ Related:
 
 ## convert size in bytes to KB MB GB
 
+存储单位转换
+
 ```js
 function formatBytes(bytes, decimals = 2) {
     if (bytes === 0) return '0 Bytes';
@@ -101,6 +108,8 @@ Related:
 > - [Correct way to convert size in bytes to KB, MB, GB in JavaScript](https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript)
 
 ## Count down with deadline
+
+倒计时
 
 ```js
 function countDown () {
@@ -135,6 +144,8 @@ function countDown () {
 
 ## Number format
 
+千位分隔符
+
 ```js
 function separate (num) {
     const reg = /(?=(\B\d{3})+$)/g;
@@ -144,7 +155,9 @@ function separate (num) {
 seperate(111111)  // 111,111
 ```
 
-## Chinese Money format(人民币 分->元 转换)
+## Chinese Money format
+
+人民币 分->元 转换
 
 ```js
 // 分 -> 元
@@ -186,6 +199,8 @@ regFenToYuan(1434) // 14.34
 
 ## Number increase/decrease animation
 
+数字变动动画效果
+
 ```js
 /**
  * quickly change number from A to B
@@ -221,6 +236,8 @@ function animNumber(from, to) {
 
 ## Date format YYYY-MM-DD hh:mm:ss
 
+格式化 年月日 时分秒
+
 ```js
   const date = new Date(time);
   const year = date.getFullYear();
@@ -236,3 +253,68 @@ function animNumber(from, to) {
   // minutes = minutes < 10 ? `0${minutes}` : minutes;
   // seconds = seconds < 10 ? `0${seconds}` : seconds;
   ```
+
+## Hex color to rgb color
+
+16 进制颜色转变成 rgb 颜色
+
+```js
+function hexToRgb (hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
+};
+```
+
+## RGB color to HEX color
+
+rgb 颜色转变成16 进制颜色
+
+```js
+function rgbToHex(r, g, b) {
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+```
+
+## Email desensitize
+
+邮箱脱敏
+
+```js
+function desensitize (email: string) {
+  const part = email.split('@');
+  const prefix = part[0];
+  const domain = '@' + part[1];
+  return (
+    prefix.charAt(0) + '******' + prefix.charAt(prefix.length - 1) + domain
+  );
+};
+```
+
+## Image with height resize 
+
+尺寸缩放
+
+```js
+function resize (width: number, height: number) => {
+  let ratio = 0;
+  // change _width _height to your size
+  const _width = 1280;
+  const _height = 1920;
+  if (width > _width) {
+    ratio = width / _width;
+    const scaleHeight = height / ratio;
+    return { width: _width, height: Math.round(scaleHeight) };
+  } else if (height > _height) {
+    ratio = height / _height;
+    const scaleWidth = width / ratio;
+    return { width: Math.round(scaleWidth), height: _height };
+  }
+  return { width, height };
+};
+```
