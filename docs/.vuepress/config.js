@@ -14,6 +14,13 @@ module.exports = {
                     { text: 'Pure', link: '/javascript/pure/' },
                     { text: 'Vue', link: '/javascript/vue/' }
                 ]
+            },
+            { 
+                text: 'Mysql', 
+                ariaLabel: 'Mysql Menu',
+                items: [
+                    { text: 'Sql', link: '/mysql/sql/' },
+                ]
             }
         ],
         lastUpdated: 'Last Updated'
