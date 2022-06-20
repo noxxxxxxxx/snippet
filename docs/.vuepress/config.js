@@ -8,7 +8,7 @@ module.exports = {
                 link: '/'
             },
             { 
-                text: 'Javascript', 
+                text: 'Javascript',
                 ariaLabel: 'Javascript Menu',
                 items: [
                     { text: 'Pure', link: '/javascript/pure/' },
