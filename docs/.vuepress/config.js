@@ -21,6 +21,13 @@ module.exports = {
                 items: [
                     { text: 'Sql', link: '/mysql/sql/' },
                 ]
+            },
+            { 
+                text: 'Shell', 
+                ariaLabel: 'Shell Menu',
+                items: [
+                    { text: 'Shell', link: '/shell/' },
+                ]
             }
         ],
         lastUpdated: 'Last Updated'
