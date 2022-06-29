@@ -4,7 +4,7 @@ sidebar: auto
 
 # Javascript
 
-## get month end Day, how many days in a specific month
+## Get month end Day, how many days in a specific month
 
 获取给定月份的具体天数
 
@@ -85,7 +85,7 @@ Related:
 
 > - [Merge or concat audio file](https://github.com/jackedgson/crunker)
 
-## convert size in bytes to KB MB GB
+## Convert size in bytes to KB MB GB
 
 存储单位转换
 
@@ -296,7 +296,7 @@ function desensitize (email: string) {
 };
 ```
 
-## Image with height resize 
+## Image resize (width and height)
 
 尺寸缩放
 
@@ -318,3 +318,37 @@ function resize (width: number, height: number) => {
   return { width, height };
 };
 ```
+
+## Converting Date to time ago
+
+xx天前
+
+```js
+function formatDate = (input) => {
+  const date = (input instanceof Date) ? input : new Date(input);
+  const formatter = new Intl.RelativeTimeFormat('zh');
+  const ranges = {
+    years: 3600 * 24 * 365,
+    months: 3600 * 24 * 30,
+    weeks: 3600 * 24 * 7,
+    days: 3600 * 24,
+    hours: 3600,
+    minutes: 60,
+    seconds: 1
+  };
+  const secondsElapsed = (date.getTime() - Date.now()) / 1000;
+  for (let key in ranges) {
+    if (ranges[key] < Math.abs(secondsElapsed)) {
+      const delta = secondsElapsed / ranges[key];
+      return formatter.format(Math.round(delta), key);
+    }
+  }
+}
+```
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="NWYWYma" data-user="hjoker" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/hjoker/pen/NWYWYma">
+  Converting Date to time ago</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
