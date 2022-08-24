@@ -352,3 +352,18 @@ function formatDate = (input) => {
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+## Keywords hightlight
+
+```js
+function highLight(str, keywords) {
+  var re = new RegExp(keywords.join("|"),"gi");
+  var res = str.replace(re, function(matched){
+    return '<mark>' + matched + '</mark>';
+  });
+  return res;
+}
+
+const res = highLight('我是导演，我不比烂', ['我', '导']) 
+```
