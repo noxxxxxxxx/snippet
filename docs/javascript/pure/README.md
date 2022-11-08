@@ -367,3 +367,19 @@ function highLight(str, keywords) {
 
 const res = highLight('我是导演，我不比烂', ['我', '导']) 
 ```
+
+## Wechat go(-1) refresh
+
+IOS 下 微信返回触发刷新页面
+
+```js
+let isPageHide = false;
+window.addEventListener('pageshow', function () {
+  if (isPageHide) {
+    window.location.reload();
+  }
+});
+window.addEventListener('pagehide', function () {
+  isPageHide = true;
+});
+```
