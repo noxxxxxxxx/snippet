@@ -16,6 +16,18 @@ module.exports = {
                 ]
             },
             { 
+                text: 'CSS',
+                ariaLabel: 'CSS Menu',
+                items: [
+                    { text: 'Effect', link: '/css/effect/' }
+                ]
+            },
+            { 
+                text: 'DOM',
+                ariaLabel: 'DOM Menu',
+                link: '/dom/'
+            },
+            { 
                 text: 'Mysql', 
                 ariaLabel: 'Mysql Menu',
                 items: [

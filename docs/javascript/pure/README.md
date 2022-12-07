@@ -400,3 +400,70 @@ function parse(markdownText) {
 var str = '我是**加粗**，我是*倾斜*，好巧，我也是*倾斜*'
 console.log(parse(str));
 ```
+
+## Simple regexp remove code comment
+
+注释字符串的过滤
+
+```js
+const trimComment = function (str) {
+  return str.replace(/\/\/[\w\W]+?(?:\n|$)/g, '').replace(/\/\*[\w\W]+?\*\//gm, '');
+}
+```
+
+## Cursor in the rich text bottom when focused
+
+光标位于富文本编辑框的最后
+
+```html
+<div id="input" contenteditable="true">我是内容内容<div>
+此时执行 input.focus() 的方法，光标是在文字的最前面的，实现当输入框聚焦的时候，光标在文字的最后。
+```
+
+```js
+input.focus()
+// 创建range
+const range = window.getSelection();
+// range 选择obj下所有子内容
+range.selectAllChildren(input);
+//光标移至最后
+range.collapseToEnd();
+```
+
+or
+
+```js
+const selection = document.getSelection();
+const range = document.createRange();
+range.setStartAfter(input.lastChild)
+selection.removeAllRanges();
+selection.addRange(range);
+input.focus()
+```
+
+## Get content type when drop element
+
+拖拽释放时候内容类型的判断
+
+```js
+cantainer.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+cantainer.addEventListener('drop', function (event) {
+    console.log(event.dataTransfer.items[0].type.startsWith('image'));
+   event.preventDefault();
+});
+```
+
+## Not left click event detect
+
+use auxclick event
+
+```
+已知页面中有个按钮如下：
+<button><h1>点击我！</h1></button>
+
+请实现，鼠标左键点击此按钮，按钮背景色随机，右键或中键点击此按钮，按钮文字颜色随机，同时，不显示上下文菜单。
+
+注：无需考虑 IE 浏览器，已经暗示了考点是某个 IE 不支持的点击事件类型了。
+```
