@@ -383,3 +383,20 @@ window.addEventListener('pagehide', function () {
   isPageHide = true;
 });
 ```
+
+## Simple regexp replace markdown to HTML tag
+
+简单 JS 正则替换 Markdown 语法为 HTML 标签
+
+```js
+function parse(markdownText) {
+	const htmlText = markdownText
+		.replace(/\*\*([^*><]+)\*\*/gim, '<strong>$1</strong>')
+		.replace(/\*([^*><]+)\*/gim, '<em>$1</em>')
+
+	return htmlText.trim()
+}
+
+var str = '我是**加粗**，我是*倾斜*，好巧，我也是*倾斜*'
+console.log(parse(str));
+```
