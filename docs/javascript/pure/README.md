@@ -467,3 +467,42 @@ use auxclick event
 
 注：无需考虑 IE 浏览器，已经暗示了考点是某个 IE 不支持的点击事件类型了。
 ```
+
+
+## JS combination
+
+```js
+/*
+  全组合算法
+  input [a,b,c,d,e]
+  output [Array(5), Array(10), Array(10), Array(5), Array(1)]
+  flatten output, 
+  ['A', 'B', 'C', 'D', 'E']
+  ['AB', 'AC', 'BC', 'AD', 'BD', 'CD', 'AE', 'BE', 'CE', 'DE']
+  ['ABC', 'ABD', 'ACD', 'BCD', 'ABE', 'ACE', 'BCE', 'ADE', 'BDE', 'CDE']
+  ['ABCD', 'ABCE', 'ABDE', 'ACDE', 'BCDE']
+  ['ABCDE']
+ */
+const combination = (arr) => {
+  const list = [];
+  for (let i = 0; i < arr.length; i++) {
+    list.push([]);
+  }
+
+  const l = Math.pow(2, arr.length) - 1;
+
+  for (let i = 1; i <= l; i++) {
+    const t = [];
+
+    for (let s = i, k = 0; s > 0; s >>= 1, k++) {
+      if ((s & 1) === 1) {
+        t.push(arr[k]);
+      }
+    }
+
+    list[t.length - 1].push([t]); // join 的分隔符可以自行约定
+  }
+
+  return list.flat(2); // flatten
+};
+```
