@@ -506,3 +506,13 @@ const combination = (arr) => {
   return list.flat(2); // flatten
 };
 ```
+
+## Simple version compare
+
+固定版本号大小比较
+
+```js
+const checkVersion = (a: string, b: string) => {
+  return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); // 0:= 1:a>b -1:b>a
+}
+```
