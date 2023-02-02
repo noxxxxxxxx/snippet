@@ -516,3 +516,18 @@ const checkVersion = (a: string, b: string) => {
   return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); // 0:= 1:a>b -1:b>a
 }
 ```
+
+## JS read local picture
+
+JS 读取本地图片
+
+```js
+const readURL = (file) => {
+  return new Promise((res, rej) => {
+    const reader = new FileReader();
+    reader.onload = e => res(e.target.result);
+    reader.onerror = e => rej(e);
+    reader.readAsDataURL(file);
+  });
+};
+
