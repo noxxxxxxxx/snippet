@@ -530,4 +530,14 @@ const readURL = (file) => {
     reader.readAsDataURL(file);
   });
 };
+```
 
+## JS Random [min, max]
+
+JS 伪随机获取闭区间内的一个随机数
+
+```js
+function generateRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+```
