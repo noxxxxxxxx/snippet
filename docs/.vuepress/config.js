@@ -1,47 +1,52 @@
-module.exports = {
+import { defineUserConfig, defaultTheme } from 'vuepress'
+
+export default defineUserConfig({
+    lang: 'zh-CN',
     title: 'Snippet',
     description: 'simple code snippet',
-    themeConfig: {
-        nav: [
+    theme: defaultTheme({
+        repo: 'https://github.com/noxxxxxxxx/snippet.git',
+        contributors: false,
+        navbar: [
             {
                 text: 'Home',
                 link: '/'
             },
-            { 
+            {
                 text: 'Javascript',
-                ariaLabel: 'Javascript Menu',
-                items: [
+                children: [
                     { text: 'Pure', link: '/javascript/pure/' },
                     { text: 'Vue', link: '/javascript/vue/' }
                 ]
             },
-            { 
+            {
                 text: 'CSS',
-                ariaLabel: 'CSS Menu',
-                items: [
+                children: [
                     { text: 'Effect', link: '/css/effect/' }
                 ]
             },
-            { 
+            {
                 text: 'DOM',
-                ariaLabel: 'DOM Menu',
                 link: '/dom/'
             },
-            { 
-                text: 'Mysql', 
-                ariaLabel: 'Mysql Menu',
-                items: [
+            {
+                text: 'Mysql',
+                children: [
                     { text: 'Sql', link: '/mysql/sql/' },
                 ]
             },
-            { 
-                text: 'Shell', 
-                ariaLabel: 'Shell Menu',
-                items: [
+            {
+                text: 'Shell',
+                children: [
                     { text: 'Shell', link: '/shell/' },
                 ]
+            },
+            {
+                text: 'ImageMagick',
+                children: [
+                    { text: 'ImageMagick', link: '/imagemagick/' },
+                ]
             }
-        ],
-        lastUpdated: 'Last Updated'
-    }
-}
+    ]
+    }),
+})

@@ -135,20 +135,19 @@ function countDown () {
 }, 1000)
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="hjoker" data-slug-hash="eYJaoYR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eYJaoYR">
-  <span>See the Pen <a href="https://codepen.io/hjoker/pen/eYJaoYR">
-  eYJaoYR</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/hjoker/embed/eYJaoYR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/hjoker/pen/eYJaoYR">
+  Untitled</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## Number format
 
 千位分隔符
 
 ```js
-function separate (num) {
-    const reg = /(?=(\B\d{3})+$)/g;
+function seperate (num) {
+    const reg = /(?!^)(?=(\d{3})+$)/g
     return String(num).replace(reg, ',');
 }
 
@@ -226,12 +225,11 @@ function animNumber(from, to) {
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="hjoker" data-slug-hash="qBNdyBB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="number increase/decrease animation">
-  <span>See the Pen <a href="https://codepen.io/hjoker/pen/qBNdyBB">
+<iframe height="300" style="width: 100%;" scrolling="no" title="number increase/decrease animation" src="https://codepen.io/hjoker/embed/qBNdyBB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/hjoker/pen/qBNdyBB">
   number increase/decrease animation</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 
 ## Date format YYYY-MM-DD hh:mm:ss
@@ -346,12 +344,11 @@ function formatDate = (input) => {
 }
 ```
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="NWYWYma" data-user="hjoker" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/hjoker/pen/NWYWYma">
+<iframe height="300" style="width: 100%;" scrolling="no" title="Converting Date to time ago" src="https://codepen.io/hjoker/embed/NWYWYma?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/hjoker/pen/NWYWYma">
   Converting Date to time ago</a> by hjoker (<a href="https://codepen.io/hjoker">@hjoker</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 
 ## Keywords hightlight
