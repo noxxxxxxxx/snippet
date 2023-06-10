@@ -35,3 +35,11 @@ const convert = execSync(
   { encoding: 'utf8' },
 ).toString();
 ```
+
+## SSH keygen
+
+创建 sshkey 用于拉取自己的 github 仓库
+
+```bash
+ssh-keygen -t rsa -C "指定生成的密钥注释（comment）"
+```
