@@ -4,6 +4,8 @@ sidebar: auto
 
 # ImageMagick
 
+## 图像平铺效果
+
 - 使用蓝色填充颜色，大小为20，创建一个标签“snibgo”。
 - 将标签旋转-20度，并重新组织页面。
 - 将结果保存为名为"TILE"的中间图像。
@@ -21,4 +23,12 @@ convert -background None -fill Blue  -pointsize 20 label:snibgo  -rotate -20 +re
   ) ^
   -composite ^
   snibtile.jpg
+```
+
+## 添加水印
+
+```shell
+#!/bin/bash # usage: ./watermark.sh "your text" input_image_path.png 
+convert -background none -fill "rgba(128,128,128,0.25)" -font Arial -rotate -30 -pointsize 14 label:"$1" /Users/xxx/Desktop/watermark.png 
+convert $2 -alpha on \( +clone -tile /Users/xxx/Desktop/watermark.png -draw "color 0,0 reset" \) -composite test.png rm /Users/xxx/Desktop/watermark.png
 ```
