@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-159b6f4f","path":"/imagemagick/","title":"ImageMagick","lang":"en-US","frontmatter":{"sidebar":"auto"},"headers":[],"git":{"updatedTime":1686567297000},"filePathRelative":"imagemagick/README.md"}');export{a as data};

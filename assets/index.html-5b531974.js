@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-7445f1a6","path":"/dom/","title":"DOM","lang":"zh-CN","frontmatter":{"sidebar":"auto"},"headers":[{"level":2,"title":"Batch replace dom but keep event","slug":"batch-replace-dom-but-keep-event","link":"#batch-replace-dom-but-keep-event","children":[]}],"git":{"updatedTime":1686360407000},"filePathRelative":"dom/README.md"}');export{e as data};
