@@ -4,7 +4,7 @@ sidebar: auto
 
 # Javascript
 
-## Get the specific number of days for a given month
+## 获取给定月份的具体天数
 
 ```ts
 
@@ -17,7 +17,7 @@ getMonthEndDay(2012, 10)
 
 ```
 
-## Remove duplicate letters
+## 移除重复字符
 
 ```js
 // ES6
@@ -49,7 +49,7 @@ Related:
 > - [LeetCode](https://leetcode.com/problems/remove-duplicate-letters/submissions/)
 
 
-## Play audio using the `Audio` API
+## 通过 `Audio` 对象播放音频
 
 ```js
 function playAudio () {
@@ -78,7 +78,7 @@ Related:
 
 > - [Merge or concat audio file](https://github.com/jackedgson/crunker)
 
-## Storage unit conversion,convert size in bytes to KB MB GB
+## 存储单位转换 KB MB GB
 
 ```js
 function formatBytes(bytes, decimals = 2) {
@@ -98,7 +98,7 @@ Related:
 
 > - [Correct way to convert size in bytes to KB, MB, GB in JavaScript](https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript)
 
-## Countdown for a specified date
+## 指定日期倒计时
 
 ```js
 function countDown () {
@@ -130,8 +130,7 @@ function countDown () {
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-## Number thousand separator
-
+## 千位分隔符
 
 ```js
 function seperate (num) {
@@ -142,7 +141,7 @@ function seperate (num) {
 seperate(111111)  // 111,111
 ```
 
-## Convert Chinese yuan from cents to yuan
+## 人民币 分->元 转换
 
 ```js
 // 分 -> 元
@@ -182,7 +181,7 @@ regFenToYuan(134) // 1.34
 regFenToYuan(1434) // 14.34
 ```
 
-## Animated effect for numerical changes
+## 数字变动动画效果
 
 ```js
 /**
@@ -216,7 +215,7 @@ function animNumber(from, to) {
 </iframe>
 
 
-## Format date and time as year-month-day hour:minute:second
+## 格式化 年月日 时分秒
 
 ```js
   const date = new Date(time);
@@ -234,7 +233,7 @@ function animNumber(from, to) {
   // seconds = seconds < 10 ? `0${seconds}` : seconds;
   ```
 
-## Convert hexadecimal color to RGB color
+## 16 进制颜色转变成 rgb 颜色
 
 ```js
 function hexToRgb (hex) {
@@ -249,7 +248,7 @@ function hexToRgb (hex) {
 };
 ```
 
-## RGB color to HEX color
+## rgb 颜色转变成16 进制颜色
 
 ```js
 function rgbToHex(r, g, b) {
@@ -257,7 +256,7 @@ function rgbToHex(r, g, b) {
 }
 ```
 
-## Email desensitize
+## 邮箱脱敏
 
 ```js
 function desensitize (email: string) {
@@ -270,7 +269,7 @@ function desensitize (email: string) {
 };
 ```
 
-## Image resize (width and height)
+## 图片尺寸缩放
 
 ```js
 function resize (width: number, height: number) => {
@@ -291,7 +290,7 @@ function resize (width: number, height: number) => {
 };
 ```
 
-## Converting Date to xx day ago
+## xx天前
 
 ```js
 function formatDate = (input) => {
@@ -323,7 +322,7 @@ function formatDate = (input) => {
 </iframe>
 
 
-## Keywords hightlight
+## 关键字高亮
 
 ```js
 function highLight(str, keywords) {
@@ -337,7 +336,7 @@ function highLight(str, keywords) {
 const res = highLight('我是导演，我不比烂', ['我', '导']) 
 ```
 
-## Refresh page triggered when returning from WeChat on iOS
+## IOS 下 微信返回触发刷新页面
 
 ```js
 let isPageHide = false;
@@ -351,7 +350,7 @@ window.addEventListener('pagehide', function () {
 });
 ```
 
-## Simple JS regular expression replacement of Markdown syntax with HTML tags
+## 简单 JS 正则替换 Markdown 语法为 HTML 标签
 
 ```js
 function parse(markdownText) {
@@ -366,7 +365,7 @@ var str = '我是**加粗**，我是*倾斜*，好巧，我也是*倾斜*'
 console.log(parse(str));
 ```
 
-## Filtering of comment strings.
+## 过滤注释字符串
 
 ```js
 const trimComment = function (str) {
@@ -374,7 +373,7 @@ const trimComment = function (str) {
 }
 ```
 
-## Cursor is at the end of the rich text editing box
+## 光标位于富文本编辑框的最后
 
 ```html
 <div id="input" contenteditable="true">我是内容内容<div>
@@ -402,7 +401,7 @@ selection.addRange(range);
 input.focus()
 ```
 
-## Content type validation during drag and drop release.
+## 拖拽释放时候内容类型的判断
 
 ```js
 cantainer.addEventListener("dragover", function(event) {
@@ -414,11 +413,20 @@ cantainer.addEventListener('drop', function (event) {
 });
 ```
 
-## Not left click event detect
+## 鼠标左右按键判断
 
 use auxclick event
 
-## JS combination
+```
+已知页面中有个按钮如下：
+<button><h1>点击我！</h1></button>
+
+请实现，鼠标左键点击此按钮，按钮背景色随机，右键或中键点击此按钮，按钮文字颜色随机，同时，不显示上下文菜单。
+
+注：无需考虑 IE 浏览器，已经暗示了考点是某个 IE 不支持的点击事件类型了。
+```
+
+## 全组合算法
 
 ```js
 /*
@@ -456,7 +464,7 @@ const combination = (arr) => {
 };
 ```
 
-## Simple version compare
+## 固定版本号大小比较
 
 ```js
 const checkVersion = (a: string, b: string) => {
@@ -464,7 +472,7 @@ const checkVersion = (a: string, b: string) => {
 }
 ```
 
-## JS read local picture
+## JS 读取本地图片
 
 ```js
 const readURL = (file) => {
@@ -477,7 +485,7 @@ const readURL = (file) => {
 };
 ```
 
-## JS Random [min, max]
+## JS 伪随机获取闭区间内的一个随机数
 
 ```js
 function generateRandomInteger(min, max) {
@@ -485,7 +493,7 @@ function generateRandomInteger(min, max) {
 }
 ```
 
-## Simple check weekend
+## 简单双休日判断
 
 ```js
 function isWeekday(timestamp) {
@@ -494,7 +502,7 @@ function isWeekday(timestamp) {
 }
 ```
 
-## A method to reverse an array without changing the original array
+## 数组反转-不更改原数组
 
 ```js
 Array.prototype.toReverse = function () { 
@@ -502,10 +510,10 @@ Array.prototype.toReverse = function () {
 }
 ```
 
-## Click to reload the image with an error
+## 异常图片的点击重载
 
-If an image fails to load, clicking on it triggers a reload. If the image loads successfully, no action is taken.
-
+页面中有不少`<img src="?.jpg">`元素，由于网络等原因，这些图片可能加载失败。
+请实现，如果图片加载失败，点击这些图片触发图片重载，如果图片加载正常，不做任何处理。
 
 ```js
 img.addEventListener('click', function(){
@@ -514,7 +522,7 @@ img.addEventListener('click', function(){
   })
 })
 
-// better
+// 更好
 document.addEventListener('click', function (event) {
   var ele = event.target;
   if (ele.nodeName == 'IMG' && !ele.naturalWidth) {
@@ -523,7 +531,7 @@ document.addEventListener('click', function (event) {
 });
 ```
 
-## Media queries - Real-time listening to browser window width
+## 媒体查询 - 浏览器窗口宽度实时监听
 
 ```js
 const mql = window.matchMedia('(max-width: 640px)');
@@ -533,7 +541,7 @@ mql.onchange = () => {
 }
 ```
 
-## Swap positions of DOM nodes
+## DOM Node 节点的位置互换
 
 ```js
 function swspNode(A,B){
@@ -549,21 +557,21 @@ function swspNode(A,B){
 }
 ```
 
-## Check if the browser supports Background Fetch API
+## 判断浏览器是否支持 Background Fetch API
 
 ```js
 if ("BackgroundFetchManager" in self) {
-  console.log("support")
+  console.log("支持")
 }
 ```
 
-## Check if a page is in focus
+## 判断一个页面处于focus状态
 
 ```js
 document.hasFocus()
 ```
 
-## Highlight search results
+## 搜索内容的高亮匹配
 
 ```js
 const highLight = function (str, arr) {
@@ -574,7 +582,7 @@ const highLight = function (str, arr) {
 }
 ```
 
-## Check if the current browser supports the avif image format
+## 判断浏览器是否支持 avif 图像格式
 
 ```js
 https://github.com/Kagami/avif.js/blob/master/avif.js
@@ -586,14 +594,14 @@ function hasAv1Support() {
 }
 ```
 
-## Convert an invalid JSON string to an object
+## 非合法JSON字符串转成对象
 
 ```js
 let str = '{ opacity: 0.5, color: "black", mode:  "hide" }';
 new Function('return ' + str)()
 ```
 
-## Check if the default scrollbar of the current browser takes up width
+## 判断当前浏览器的默认滚动条是否占据宽度
 
 ```js
 // 页面高度不足，无法准确验证
@@ -610,13 +618,13 @@ function getScrollbarWidth() {
 };
 ```
 
-## Check if a web component is defined using customElements.define('xx-xx')
+## Web组件是否定义（customElements.define('xx-xx')）的判断
 
 ```js
 drop.matches(':defined')
 ```
 
-## Synchronized scrolling of two containers
+## 两侧容器同步滚动
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="两侧容器同步滚动" src="https://codepen.io/hjoker/embed/poQJYPr?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/hjoker/pen/poQJYPr">
@@ -624,7 +632,7 @@ drop.matches(':defined')
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-## Remove events from the DOM
+## 移除 DOM 上的事件
 
 ```js
 let clone = element.cloneNode(true);
