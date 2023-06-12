@@ -1,1 +1,0 @@
-const a=JSON.parse('{"key":"v-28c682fe","path":"/zh/imagemagick/","title":"ImageMagick","lang":"zh-CN","frontmatter":{"sidebar":"auto"},"headers":[],"git":{"updatedTime":1686567297000},"filePathRelative":"zh/imagemagick/README.md"}');export{a as data};

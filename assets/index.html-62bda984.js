@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0924f0a3","path":"/zh/javascript/vue/","title":"Vue","lang":"zh-CN","frontmatter":{"sidebar":"auto"},"headers":[{"level":2,"title":"对话框组件","slug":"对话框组件","link":"#对话框组件","children":[]}],"git":{"updatedTime":1686581945000},"filePathRelative":"zh/javascript/vue/README.md"}');export{e as data};
